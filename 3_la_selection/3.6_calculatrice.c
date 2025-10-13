@@ -2,33 +2,36 @@
 
 int main(void) {
     int nombre1, nombre2, resultat;
-    char operateur;
 
+    char calcul[3];
     // TODO: récupérer le calcul
-    printf("nombre 1");
-    scanf("%i", &nombre1);
-    printf("nombre 2");
-    scanf("%i", &nombre2);
-    printf("operateur");
-    scanf("%c", &operateur);
+    printf("Entrez votre calcul\n");
+    scanf("%s", calcul);
+          
+          
+    nombre1 = calcul[0] - '0';
+    nombre2 = calcul[2] - '0';
     // TODO: calculer le résultat
-    switch (operateur) {
+    switch (calcul[1]) {
   case '+':
     // code block
     resultat = nombre1 + nombre2;
+    printf("= %i", resultat);
     break;
   case '-':
     // code block
     resultat = nombre1 - nombre2;
+    printf("= %i", resultat);
     break;
   case '*':
     // code block
     resultat = nombre1 * nombre2;
+    printf("= %i", resultat);
     break;
   case '/':
     // code block
     resultat = nombre1 / nombre2;
-
-    return 0;
+    printf("= %i", resultat);
 }
+return 0;
 }
